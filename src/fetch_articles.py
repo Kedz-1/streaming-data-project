@@ -80,33 +80,3 @@ def fetch_article(guardian_key, search_term, reference='articles', date_from=Non
         }
 
 print(fetch_article(guardian_key, 'trump', 'guardian_content', '2024-11-20'))
-
-
-
-'''
-The tool will publish data to the message broker in the following JSON
-format:
-{
-"webPublicationDate": "2023-11-21T11:11:31Z",
-"webTitle": "Who said what: using machine learning to correctly attribute
-quotes",
-"webUrl": "https://www.theguardian.com/info/2023/nov/21/who-saidwhat-using-machine-learning-to-correctly-attribute-quotes"
-}
-These fields are the minimum required. Others may be added at your
-discretion.
-'''
-
-
-
-
-# web_title = articles['response']['results'][0]['webTitle']
-        # web_url = articles['response']['results'][0]['webUrl']
-        # web_publication_date = articles['response']['results'][0]['webPublicationDate']
-        
-        # return {
-        #     'statusCode' : response.status_code,
-        #     'webPublicationDate': web_publication_date,
-        #     'webTitle': web_title,
-        #     'webUrl': web_url
-        
-        # }
