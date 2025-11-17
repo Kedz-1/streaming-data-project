@@ -1,5 +1,6 @@
 fastapi
 boto3
+moto
 pytest
 uvicorn
 pydantic
