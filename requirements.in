@@ -2,6 +2,7 @@ fastapi
 boto3
 moto
 pytest
+pytest-cov
 uvicorn
 pydantic
 requests

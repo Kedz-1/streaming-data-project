@@ -12,3 +12,5 @@ venv/
 .terraform/
 *.tfstate
 *.tfstate.*
+
+.coverage
