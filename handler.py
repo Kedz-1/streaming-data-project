@@ -8,16 +8,16 @@ from src.main import fetch_and_send_articles
 
 logging.basicConfig(level=logging.INFO)
 
+
+
 def handler(event, context):
 
 
     try:
-
         search_term = os.environ.get("SEARCH_TERM")
+        queue_name = os.environ.get("QUEUE_NAME")
         date_from = os.environ.get("DATE_FROM", None)
-
-        print("search_term:", search_term )
-        print("date_from:", date_from)
+        guardian_key = os.environ.get("GUARDIAN_KEY")
 
         logging.info(f"Running Lambda with search_term='{search_term}', date_from='{date_from}'")
         
@@ -25,7 +25,7 @@ def handler(event, context):
             raise ValueError("Event must include a 'search_term'")
 
         logging.info('Lambda function has run successfully')
-        return fetch_and_send_articles(search_term, date_from)
+        return fetch_and_send_articles(search_term, queue_name, date_from)
         
 
     except Exception as e:

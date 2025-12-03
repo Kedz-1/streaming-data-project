@@ -21,13 +21,10 @@ def fetch_and_send_articles(search_term, reference, date_from=None):
 
         logging.info('send_sqs function has worked')
 
+        return response
+
     except Exception as e:
-        logging.error(f'Error has occured: {e}')
+        logging.error(f'Error has occured - fetch_and_send_articles: {e}')
 
 
-    return response
-
-#fetch_and_send_articles('Trump', '2022-01-01', 'guardian_content')
-
-
-#print(fetch_and_send_articles('Trump', '2022-01-01', 'guardian_content'))
+    return None
