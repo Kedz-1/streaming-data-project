@@ -1,4 +1,14 @@
+package/
+
 venv/
+.env
 **/.pycache
 **/__pycache__
-.env
+
+
+
+.terraform
+*.terraform.**
+.terraform/
+*.tfstate
+*.tfstate.*
