@@ -1,5 +1,7 @@
 ## Context
-Initially, I was offered a choice between 2 briefs for a freelance work. I chose a 'GDPR Obfuscation' module that sensitised personal information as I was more comfortable with the requirements - s3 end-to-end. So by necessity, in choosing the brief that I was more comfortable with meant that I wasn't as confident with the 'Streaming Data' project. Thus, I decided to complete this project in my personal time.
+Initially, I was offered a choice between 2 briefs for freelance work. I chose a 'GDPR Obfuscation' module that sensitised personal information as I was more comfortable with the requirements. 
+
+So by necessity, in choosing the brief that I was more comfortable with meant that I wasn't as confident with the 'Streaming Data' project. Thus, I decided to complete this project in my personal time.
 
 ## Tech stack
 
@@ -15,14 +17,14 @@ I used Requests to retrieve article data from The Guardian API. It provides a st
 Boto3 allowed me to interact directly with AWS services, particularly SQS. This made it possible to publish article data into a queue for downstream processing.
 
 ### AWS SQS
-I chose SQS because it introduces a decoupled architecture. The process collecting articles does not need to know what consumes the data later, making the system more scalable and flexible.
+I chose SQS because it introduces a decoupled architecture. The process collecting articles does not need to know what consumes the data later, making the system more flexible.
 
 ### AWS Lambda/EventBridge
 Lambda allowed the application to run without managing servers, making it cost-effective and suitable for periodic workloads. Whilst EventBridge was used to schedule automatic excecutions.
 
 ### Terraform
 
-Terraform enabled me to provision infrastructure consistently through code. It also provided version control for infrastructure changes and simplified deployment and teardown.
+Terraform enabled me to create infrastructure consistently through code. It also provided version control for infrastructure changes and simplified deployment and teardown.
 
 ### Pytest and Moto
 
